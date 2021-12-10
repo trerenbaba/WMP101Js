@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="test1"></p>
+    <p id="test2"></p>
+
+    <button onclick="document.getElementById('test1').innerHTML=Date()"> Time is?
+    </button>
+
+    <button onclick="this.innerHTML=Date()">The Time is?
+    </button>
+
+
+    <script>
+        var x = fonk(20, 40);
+        document.getElementById('test2').innerHTML=x;
+        function fonk(a, b) {
+            return a * b;
+        }
+    </script>
+</body>
+
+</html>

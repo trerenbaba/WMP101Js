@@ -1,0 +1,40 @@
+<!--
+4 yontemle js çıktılarını görebiliyoruz.
+
+1.yöntem innerHtml
+2.yöntem document.write()
+3.yöntem window.alert()
+4.yöntem console.log()
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Lorem ipsum dolor sit amet.</h1>
+    <p id="test"></p>
+
+    <!-- document.write() tüm html kodlarını siler.-->
+    <button
+    onclick="document.write(6+7)">Toplama
+    </button>
+    <button
+    onclick="window.print()">Yazdır
+    </button>
+
+    <script>
+        document.getElementById('test').innerHTML=5*6;
+        //window global scope ta tanımlı olduğu için kullanma zorunluluğu yoktur
+        // window.alert(4*5);
+        // alert(3*12)
+        console.log("Sayıların toplamı ="+(88+12));
+    </script>
+</body>
+
+</html>

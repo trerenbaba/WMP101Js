@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Carpma islemi</h1>
+
+    <form name="carpma">
+        <label>1. Sayı :</label>
+        <input type="text" id="sayi1"><br> <br>
+
+        <label>2. Sayı :</label>
+        <input type="text" id="sayi2"><br> <br>
+
+        <label>3. Sayı :</label>
+        <input type="text" id="sayi3"><br> <br>
+        <input type="button" id="btnHesapla" value="HESAPLA" onclick="Carpma()" />
+    </form>
+
+    <div id="kutuCarpim"></div>
+
+    <script>
+        function Carpma() {
+            try {
+                const sayi1 = Number(document.getElementById("sayi1").value);
+                const sayi2 = Number(document.getElementById("sayi2").value);
+                const sayi3 = Number(document.getElementById("sayi3").value);
+                document.getElementById("kutuCarpim").innerHTML = sayi1 * sayi2 * sayi3;
+
+            } catch (err) {
+
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="test1"></p>
+    <p id="test2"></p>
+    <p id="test3"></p>
+    <p id="test4"></p>
+    <label for="" style="background-color: blue;color: white;">Blue</label>
+
+    <button 
+    onclick="document.getElementById('test1').innerHTML=z">Z Değeri
+    </button>
+    <!-- 3 eşittir (===) hem değerini hemde değişken tipi aynı mı diye bakar-->
+    <button
+     onclick="document.getElementById('test1').innerHTML=(x===y)+'<br>'+(x===z)">Karşılaştırma
+    </button>
+
+    <button
+     onclick="document.getElementById('test1').innerHTML=aa">Sonuçlar
+    </button>
+
+
+    <script>
+        let x,y,z;
+        x=5;
+        y="5";
+        z=6;
+        
+        let lenght=16; //number
+        let lastName="Agici"; //string
+        let xx={firstName:"Onur",lastName:"Agici",age:45}; //object
+
+        let xxx=16+"Deneme"; //16Deneme
+        let a=16+4+"Deneme"; //20Deneme
+        let aa="Deneme"+16+4; //Deneme164
+
+        const arabalar=["Opel","Toyota","Broadway"];
+        document.getElementById('test2').innerHTML=arabalar[2];
+        const person={
+            firstName:"Eren",
+            lastName:"Baba",
+            age:24,
+            eyeColor:'<label for="" style="background-color: blue;color: white;">Blue</label>',
+        };
+        document.getElementById('test3').innerHTML=person.firstName+' is '+person.age+' years old'+" and eye colors "+person.eyeColor;
+
+    </script>
+</body>
+</html>

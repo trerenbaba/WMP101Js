@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="test1"></p>
+    <p id="test2"></p>
+    <p id="test3"></p>
+    <p id="test4"></p>
+    <p id="test5"></p>
+    <p id="test6"></p>
+    <p id="test7"></p>
+    <p id="test8">Naber nasılsın ?</p>
+    <p id="test9">Bu bir deneme yazisidir. deneme</p>
+    <p id="test10">kucuk olanı büyüt</p>
+    <p id="test11"></p>
+    <p id="test12"></p>
+    <p id="test13"></p>
+    <p id="test14"></p>
+    <p id="test15"></p>
+    <p id="test16"></p>
+
+    <button onclick="fonk()">  replace</button>
+    <button onclick="fonk1()">  replace1</button>
+    <button onclick="fonk2()"> büyütme</button>
+    <button onclick="fonk3()"> küçültme</button>
+    <script>
+        let str1="Hello";
+        let str2="World";
+        let str3=str1.concat(" ",str2);
+
+        let sayi="5";
+        document.getElementById('test11').innerHTML=str3;
+        document.getElementById('test12').innerHTML=sayi.padStart(4,0);
+        document.getElementById('test13').innerHTML=sayi.padEnd(4,0);
+        document.getElementById('test14').innerHTML=str1.charAt(0);
+        document.getElementById('test15').innerHTML=str1.charCodeAt(0);
+        document.getElementById('test16').innerHTML=str1[0];
+
+
+        let txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        let str="Araba, Otobüs, Kamyon";
+        document.getElementById('test7').innerHTML = str.substr(-6);
+        document.getElementById('test6').innerHTML = str.substr(7);
+        document.getElementById('test5').innerHTML = str.substr(7,6);
+        document.getElementById('test4').innerHTML = str.slice(7);
+        document.getElementById('test3').innerHTML = str.slice(7,-8);
+        document.getElementById('test2').innerHTML = str.slice(7,13);
+        document.getElementById('test1').innerHTML = txt.length
+
+        function fonk() {
+            let text=document.getElementById('test8').innerHTML;
+            document.getElementById('test8').innerHTML=text.replace(
+            /Nasılsın/i,
+            'Deneme');
+        }
+        function fonk1() {
+            let text=document.getElementById('test9').innerHTML;
+            document.getElementById('test9').innerHTML=text.replace(
+            /deneme/g,
+            'uydurma');
+        }
+        function fonk2(){
+            let text=document.getElementById('test10').innerHTML;
+            text="buyuk olani kucult"
+            document.getElementById('test10').innerHTML=text.toUpperCase()
+        }
+        function fonk3(){
+            let text=document.getElementById('test10').innerHTML;
+            text="kucuk olani büyült"
+            document.getElementById('test10').innerHTML=text.toLowerCase()
+        }
+
+    </script>
+</body>
+
+</html>

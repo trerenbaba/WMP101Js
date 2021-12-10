@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <p id="test">Selam</p>
+    <p id="test2" style="font-size: 15px;">Lorem ipsum dolor sit amet.</p>
+    <p id="script"></p>
+    <p id="test3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit facilis tempore consequatur est quo modi unde ipsum, facere sit harum libero ex numquam illo molestiae vero, eveniet impedit at blanditiis!</p>
+
+    <p id="test4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti ratione id veniam, blanditiis excepturi porro at veritatis. Inventore, non aliquid? Esse aliquam magnam hic saepe cumque. Quod sed nesciunt quo!</p>
+
+    <button onclick="fonk()">Değiştir</button>
+
+    <button onclick="fonk1()">Değiştir1</button>
+
+    <script>
+        document.getElementById('script').innerHTML = "Deneme yazısıdır...";  
+        
+        function fonk(){
+            document.getElementById('test3').innerHTML="Paragraf Değiştirildi";
+        }
+    </script>
+
+
+
+
+
+    <label type="button" onclick="document.getElementById('test2').style.display='none'"
+        style="border: 1px solid #000; color: #fff; background:#000;">Gizle
+    </label>
+
+    <label type="button" onclick="document.getElementById('test2').style.display='block'">Göster</label>
+
+
+
+    <button onclick="document.getElementById('test2').style.fontSize='35px'">FontSize değiştir</button>
+    <button onclick="document.getElementById('test').innerHTML='Selam JS'">Selamlama
+    </button>
+
+    <button onclick="document.getElementById('test1').src='images/pic_bulbon.gif'">Ac
+    </button>
+
+
+    <img src="images/pic_bulboff.gif" id="test1" alt="">
+
+    <button onclick="document.getElementById('test1').src='images/pic_bulboff.gif'">Kapat
+    </button>
+
+    <!-- <script src="script.js"></script> -->
+</body>
+
+</html>
